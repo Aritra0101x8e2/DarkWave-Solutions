@@ -1,0 +1,89 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 15%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 170 100% 70%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 170 100% 70%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-darkwave-900 text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-darkwave-900/60 backdrop-blur-md border border-darkwave-800/50 rounded-lg;
+  }
+
+  .threat-line {
+    @apply h-1 bg-gradient-to-r rounded-full overflow-hidden relative;
+  }
+
+  .threat-line:after {
+    content: "";
+    @apply absolute top-0 left-0 right-0 h-full bg-electric-400/20;
+    animation: scan-animation 2s linear infinite;
+  }
+
+  @keyframes scan-animation {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .data-stream {
+    background: linear-gradient(90deg, transparent, rgba(100, 255, 218, 0.2), transparent);
+    background-size: 200% 100%;
+    animation: data-stream-animation 3s infinite;
+  }
+
+  @keyframes data-stream-animation {
+    0% {
+      background-position: -100% 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+}
