@@ -51,17 +51,21 @@ const SecurityLayers: React.FC<SecurityLayersProps> = ({ className }) => {
       <h3 className="text-lg font-semibold mb-4">Multi-Layered Security Architecture</h3>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-        <LayerItem 
-          icon={<Shield size={18} />}
-          name="Advanced Firewall"
-          description="Real-time traffic filtering and inspection"
-        />
+       
         
-        <LayerItem 
-          icon={<Cpu size={18} />}
-          name="AI-Driven Analysis"
-          description="Machine learning pattern recognition"
-        />
+      <a 
+  href="https://network-traffic-aritra-darkwave.vercel.app/" 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  className="w-full"
+>
+  <LayerItem 
+    icon={<Cpu size={18} />}
+    name="AI-Driven Analysis"
+    description="Machine learning pattern recognition"
+  />
+</a>
+
         
         <a 
   href="https://trust-vault-id-darkwave-aritra.vercel.app/" 
