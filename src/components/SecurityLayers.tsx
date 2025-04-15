@@ -119,7 +119,7 @@ const SecurityLayers: React.FC<SecurityLayersProps> = ({ className }) => {
 
         
         <a 
-  href="https://ryvora-darkwave-aritra.vercel.app/" 
+  href="https://spectra-ai-darkwave-aritra.vercel.app/" 
   target="_blank" 
   rel="noopener noreferrer"
 >
